@@ -50,12 +50,18 @@ public class Trans {
             } else if (input == 2) {
                 System.out.println("Enter Amount of money you want to deposit : \n");
                 int input2 = scanner.nextInt();
-                obj.deposit(input2);
+                if (input2 < 0) {
+                    System.out.println("Please Enter valid amount\n");
+                } else
+                    obj.deposit(input2);
                 some_T(obj);
             } else if (input == 3) {
                 System.out.println("Enter Amount of money you want to withdraw : \n");
                 int input2 = scanner.nextInt();
-                obj.withdraw(input2);
+                if (input2 < 0) {
+                    System.out.println("Please Enter valid amount\n");
+                } else
+                    obj.withdraw(input2);
                 some_T(obj);
             } else if (input == 4) {
                 return;
